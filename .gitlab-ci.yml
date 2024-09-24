@@ -16,13 +16,13 @@ validate & plan:
   script:
   - terraform validate
   - terraform plan -out plan.out
-cache:
-  key: plan
-  policy: push
-  paths:
-  - plan.out
+  cache:
+    key: plan
+    policy: push
+    paths:
+    - plan.out
 
-apply
+apply:
   extends: .templete
   stage: apply 
   script:
