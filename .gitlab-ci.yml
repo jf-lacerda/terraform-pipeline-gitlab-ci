@@ -11,7 +11,7 @@ stages:
   - terraform init
 
 validate & plan:
-  extends: .templete
+  extends: .template
   stage: validate_plan
   script:
   - terraform validate
@@ -23,7 +23,7 @@ validate & plan:
     - plan.out
 
 apply:
-  extends: .templete
+  extends: .template
   stage: apply 
   script:
   - terraform apply plan.out
@@ -35,7 +35,7 @@ apply:
   when: manual
 
 destroy: 
-  extends: .templete
+  extends: .template
   stage: destroy
   script:
   - terraform destroy -auto-approve
