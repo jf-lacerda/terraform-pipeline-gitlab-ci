@@ -3,7 +3,7 @@ stages:
 - apply
 - destroy
 
-.templates:
+.template:
   image:
     name: hashicorp/terraform:1.9.6
     entrypoint: [""]
